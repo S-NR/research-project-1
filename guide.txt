@@ -1,0 +1,19 @@
+fetch_earth_engine_data.py — Step 1. Fetches daily CHIRPS rainfall + daily SMAP soil moisture from Earth Engine and writes them as combined CSVs. If those CSVs already exist in --data-dir, it does nothing at all — no Earth Engine call, no project ID even needed — unless you pass --refresh. Verified: with dummy CSVs in place, it correctly detected them and exited without touching Earth Engine.
+
+
+python fetch_earth_engine_data.py --ee-project-id my-research-project-506405
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+run_analysis_pipeline.py — Step 2. Never calls Earth Engine. Loads the CSVs from step 1 plus the uploaded annual AlphaEarth/hydrology/coordinates CSVs, then runs every remaining stage (events → Dragon-King → features → train → evaluate → report) using the exact same functions imported from run_kodagu_dk_pipeline.py. Verified: --validate-inputs correctly validated the real packaged CSVs, and running without the daily CSVs present raises a clear error pointing back to script 1.
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+README.md — usage and the one documented behavioral simplification (each stage always re-reads from the shared CSV cache rather than a per-run hashed copy, so the cache is reusable across every run/stage).
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+python diagnose_chirps.py --ee-project-id my-research-project-506405
+
+python fetch_earth_engine_data.py --ee-project-id my-research-project-506405
