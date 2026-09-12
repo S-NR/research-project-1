@@ -800,11 +800,21 @@ def extract_daily_rainfall(
         logger.info("Reusing cached daily rainfall: %s", combined_path)
         return pd.read_parquet(combined_path)
 
+    # Each month is cached to disk the moment it is downloaded, so a
+    # transient Earth Engine failure partway through the full date range
+    # (rate limits, "too many concurrent aggregations", etc.) does not force
+    # already-fetched months to be re-downloaded on the next attempt.
+    month_cache_dir = paths.raw / "_rainfall_monthly_cache"
     chirps = ee.ImageCollection(cfg.chirps_asset).filterBounds(geom)
     frames: list[pd.DataFrame] = []
     start = date(cfg.start_year, 1, 1)
     end = date(cfg.end_year + 1, 1, 1)
     for month_start, month_end in monthly_periods(start, end):
+        month_cache_file = month_cache_dir / f"rainfall_{month_start:%Y-%m}.parquet"
+        if month_cache_file.exists() and not refresh:
+            logger.info("Reusing cached CHIRPS month: %s", month_start.strftime("%Y-%m"))
+            frames.append(pd.read_parquet(month_cache_file))
+            continue
         logger.info("Downloading CHIRPS daily rainfall %s", month_start.strftime("%Y-%m"))
         fc = reduce_collection_by_day(
             ee,
@@ -817,6 +827,7 @@ def extract_daily_rainfall(
             month_end,
         )
         frame = ee_fc_to_dataframe(ee, fc, ["sample_id", "date", "rain_mm_day"])
+        save_parquet(frame, month_cache_file)
         frames.append(frame)
 
     rain = pd.concat(frames, ignore_index=True)
@@ -873,8 +884,19 @@ def extract_daily_smap(
     start = date(cfg.start_year, 1, 1) - timedelta(days=cfg.antecedent_window_days)
     end = date(cfg.end_year + 1, 1, 1)
     smap = ee.ImageCollection(cfg.smap_asset).filterBounds(geom)
+    # Each month is cached to disk the moment it is downloaded (see the same
+    # pattern in extract_daily_rainfall), so a transient Earth Engine failure
+    # partway through does not force already-fetched months to be
+    # re-downloaded on the next attempt. Interpolation still runs once below,
+    # on the full assembled series, since it needs day-to-day continuity.
+    month_cache_dir = paths.raw / "_smap_monthly_cache"
     frames: list[pd.DataFrame] = []
     for month_start, month_end in monthly_periods(start, end):
+        month_cache_file = month_cache_dir / f"smap_{month_start:%Y-%m}.parquet"
+        if month_cache_file.exists() and not refresh:
+            logger.info("Reusing cached SMAP month: %s", month_start.strftime("%Y-%m"))
+            frames.append(pd.read_parquet(month_cache_file))
+            continue
         logger.info("Downloading daily-mean SMAP %s", month_start.strftime("%Y-%m"))
         daily = make_smap_daily_collection(
             ee, smap, month_start, month_end, cfg.smap_bands
@@ -889,9 +911,9 @@ def extract_daily_smap(
             month_start,
             month_end,
         )
-        frames.append(
-            ee_fc_to_dataframe(ee, fc, ["sample_id", "date", *cfg.smap_bands])
-        )
+        frame = ee_fc_to_dataframe(ee, fc, ["sample_id", "date", *cfg.smap_bands])
+        save_parquet(frame, month_cache_file)
+        frames.append(frame)
 
     sm = pd.concat(frames, ignore_index=True)
     sm["sample_id"] = pd.to_numeric(sm["sample_id"]).astype(int)

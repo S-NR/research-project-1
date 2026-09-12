@@ -16,4 +16,8 @@ README.md — usage and the one documented behavioral simplification (each stage
 
 python diagnose_chirps.py --ee-project-id my-research-project-506405
 
+pip install pyarrow
+cd E:\Research\Kodagu_DK_Audit_Corrected_Pipeline
+setup_windows.bat
+
 python fetch_earth_engine_data.py --ee-project-id my-research-project-506405
