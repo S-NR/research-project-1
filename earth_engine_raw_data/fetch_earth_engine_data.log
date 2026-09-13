@@ -103,3 +103,231 @@
 2026-09-13 00:39:19,435 | INFO | Saved boundary and verified 600 uploaded sites
 2026-09-13 00:39:19,435 | INFO | Downloading CHIRPS daily rainfall 2017-01
 2026-09-13 00:40:07,859 | INFO | Downloading CHIRPS daily rainfall 2017-02
+2026-09-13 00:40:52,361 | INFO | Downloading CHIRPS daily rainfall 2017-03
+2026-09-13 00:41:38,459 | INFO | Downloading CHIRPS daily rainfall 2017-04
+2026-09-13 00:42:20,438 | INFO | Downloading CHIRPS daily rainfall 2017-05
+2026-09-13 00:43:10,460 | INFO | Downloading CHIRPS daily rainfall 2017-06
+2026-09-13 00:43:50,190 | INFO | Downloading CHIRPS daily rainfall 2017-07
+2026-09-13 00:44:32,885 | INFO | Downloading CHIRPS daily rainfall 2017-08
+2026-09-13 00:45:19,340 | INFO | Downloading CHIRPS daily rainfall 2017-09
+2026-09-13 00:46:01,350 | INFO | Downloading CHIRPS daily rainfall 2017-10
+2026-09-13 00:46:48,210 | INFO | Downloading CHIRPS daily rainfall 2017-11
+2026-09-13 00:47:28,009 | INFO | Downloading CHIRPS daily rainfall 2017-12
+2026-09-13 00:48:10,774 | INFO | Downloading CHIRPS daily rainfall 2018-01
+2026-09-13 00:48:53,895 | INFO | Downloading CHIRPS daily rainfall 2018-02
+2026-09-13 00:49:32,702 | INFO | Downloading CHIRPS daily rainfall 2018-03
+2026-09-13 00:50:14,693 | INFO | Downloading CHIRPS daily rainfall 2018-04
+2026-09-13 00:50:52,435 | INFO | Downloading CHIRPS daily rainfall 2018-05
+2026-09-13 00:51:34,028 | INFO | Downloading CHIRPS daily rainfall 2018-06
+2026-09-13 00:52:13,234 | INFO | Downloading CHIRPS daily rainfall 2018-07
+2026-09-13 00:52:53,489 | INFO | Downloading CHIRPS daily rainfall 2018-08
+2026-09-13 00:53:36,866 | INFO | Downloading CHIRPS daily rainfall 2018-09
+2026-09-13 00:54:19,267 | INFO | Downloading CHIRPS daily rainfall 2018-10
+2026-09-13 00:55:00,465 | INFO | Downloading CHIRPS daily rainfall 2018-11
+2026-09-13 00:55:42,754 | INFO | Downloading CHIRPS daily rainfall 2018-12
+2026-09-13 00:56:22,879 | INFO | Downloading CHIRPS daily rainfall 2019-01
+2026-09-13 00:57:02,915 | INFO | Downloading CHIRPS daily rainfall 2019-02
+2026-09-13 00:57:40,092 | INFO | Downloading CHIRPS daily rainfall 2019-03
+2026-09-13 00:58:20,423 | INFO | Downloading CHIRPS daily rainfall 2019-04
+2026-09-13 00:59:02,557 | INFO | Downloading CHIRPS daily rainfall 2019-05
+2026-09-13 00:59:44,622 | INFO | Downloading CHIRPS daily rainfall 2019-06
+2026-09-13 01:00:22,578 | INFO | Downloading CHIRPS daily rainfall 2019-07
+2026-09-13 01:01:11,195 | INFO | Downloading CHIRPS daily rainfall 2019-08
+2026-09-13 01:01:53,328 | INFO | Downloading CHIRPS daily rainfall 2019-09
+2026-09-13 01:02:46,246 | INFO | Downloading CHIRPS daily rainfall 2019-10
+2026-09-13 01:03:41,887 | INFO | Downloading CHIRPS daily rainfall 2019-11
+2026-09-13 01:04:22,006 | INFO | Downloading CHIRPS daily rainfall 2019-12
+2026-09-13 01:05:18,248 | INFO | Downloading CHIRPS daily rainfall 2020-01
+2026-09-13 01:06:01,135 | INFO | Downloading CHIRPS daily rainfall 2020-02
+2026-09-13 01:06:40,687 | INFO | Downloading CHIRPS daily rainfall 2020-03
+2026-09-13 01:07:23,768 | INFO | Downloading CHIRPS daily rainfall 2020-04
+2026-09-13 01:08:03,240 | INFO | Downloading CHIRPS daily rainfall 2020-05
+2026-09-13 01:08:45,986 | INFO | Downloading CHIRPS daily rainfall 2020-06
+2026-09-13 01:09:40,967 | INFO | Downloading CHIRPS daily rainfall 2020-07
+2026-09-13 01:10:23,680 | INFO | Downloading CHIRPS daily rainfall 2020-08
+2026-09-13 01:11:05,454 | INFO | Downloading CHIRPS daily rainfall 2020-09
+2026-09-13 01:11:45,052 | INFO | Downloading CHIRPS daily rainfall 2020-10
+2026-09-13 01:12:26,535 | INFO | Downloading CHIRPS daily rainfall 2020-11
+2026-09-13 01:13:06,792 | INFO | Downloading CHIRPS daily rainfall 2020-12
+2026-09-13 01:13:49,754 | INFO | Downloading CHIRPS daily rainfall 2021-01
+2026-09-13 01:14:30,063 | INFO | Downloading CHIRPS daily rainfall 2021-02
+2026-09-13 01:19:38,828 | INFO | Downloading CHIRPS daily rainfall 2021-03
+2026-09-13 01:20:26,834 | INFO | Downloading CHIRPS daily rainfall 2021-04
+2026-09-13 01:21:18,263 | INFO | Downloading CHIRPS daily rainfall 2021-05
+2026-09-13 01:22:08,393 | INFO | Downloading CHIRPS daily rainfall 2021-06
+2026-09-13 01:22:52,171 | INFO | Downloading CHIRPS daily rainfall 2021-07
+2026-09-13 01:23:40,674 | INFO | Downloading CHIRPS daily rainfall 2021-08
+2026-09-13 01:24:27,103 | INFO | Downloading CHIRPS daily rainfall 2021-09
+2026-09-13 01:25:07,763 | INFO | Downloading CHIRPS daily rainfall 2021-10
+2026-09-13 01:25:53,488 | INFO | Downloading CHIRPS daily rainfall 2021-11
+2026-09-13 01:26:34,715 | INFO | Downloading CHIRPS daily rainfall 2021-12
+2026-09-13 01:27:20,798 | INFO | Downloading CHIRPS daily rainfall 2022-01
+2026-09-13 01:28:05,279 | INFO | Downloading CHIRPS daily rainfall 2022-02
+2026-09-13 01:28:49,475 | INFO | Downloading CHIRPS daily rainfall 2022-03
+2026-09-13 01:32:59,357 | INFO | Downloading CHIRPS daily rainfall 2022-04
+2026-09-13 01:33:41,152 | INFO | Downloading CHIRPS daily rainfall 2022-05
+2026-09-13 01:34:24,492 | INFO | Downloading CHIRPS daily rainfall 2022-06
+2026-09-13 01:35:03,894 | INFO | Downloading CHIRPS daily rainfall 2022-07
+2026-09-13 01:35:44,385 | INFO | Downloading CHIRPS daily rainfall 2022-08
+2026-09-13 01:36:26,308 | INFO | Downloading CHIRPS daily rainfall 2022-09
+2026-09-13 01:37:07,594 | INFO | Downloading CHIRPS daily rainfall 2022-10
+2026-09-13 01:37:49,402 | INFO | Downloading CHIRPS daily rainfall 2022-11
+2026-09-13 01:38:28,933 | INFO | Downloading CHIRPS daily rainfall 2022-12
+2026-09-13 01:39:08,356 | INFO | Downloading CHIRPS daily rainfall 2023-01
+2026-09-13 01:39:49,562 | INFO | Downloading CHIRPS daily rainfall 2023-02
+2026-09-13 01:40:30,913 | INFO | Downloading CHIRPS daily rainfall 2023-03
+2026-09-13 01:41:12,468 | INFO | Downloading CHIRPS daily rainfall 2023-04
+2026-09-13 01:41:51,533 | INFO | Downloading CHIRPS daily rainfall 2023-05
+2026-09-13 01:42:31,725 | INFO | Downloading CHIRPS daily rainfall 2023-06
+2026-09-13 06:26:17,815 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 06:26:21,739 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 06:26:21,740 | INFO | Reusing cached CHIRPS month: 2017-01
+2026-09-13 06:26:21,869 | INFO | Reusing cached CHIRPS month: 2017-02
+2026-09-13 06:26:21,872 | INFO | Reusing cached CHIRPS month: 2017-03
+2026-09-13 06:26:21,874 | INFO | Reusing cached CHIRPS month: 2017-04
+2026-09-13 06:26:21,877 | INFO | Reusing cached CHIRPS month: 2017-05
+2026-09-13 06:26:21,879 | INFO | Reusing cached CHIRPS month: 2017-06
+2026-09-13 06:26:21,881 | INFO | Reusing cached CHIRPS month: 2017-07
+2026-09-13 06:26:21,884 | INFO | Reusing cached CHIRPS month: 2017-08
+2026-09-13 06:26:21,886 | INFO | Reusing cached CHIRPS month: 2017-09
+2026-09-13 06:26:21,889 | INFO | Reusing cached CHIRPS month: 2017-10
+2026-09-13 06:26:21,891 | INFO | Reusing cached CHIRPS month: 2017-11
+2026-09-13 06:26:21,894 | INFO | Reusing cached CHIRPS month: 2017-12
+2026-09-13 06:26:21,895 | INFO | Reusing cached CHIRPS month: 2018-01
+2026-09-13 06:26:21,898 | INFO | Reusing cached CHIRPS month: 2018-02
+2026-09-13 06:26:21,900 | INFO | Reusing cached CHIRPS month: 2018-03
+2026-09-13 06:26:21,902 | INFO | Reusing cached CHIRPS month: 2018-04
+2026-09-13 06:26:21,904 | INFO | Reusing cached CHIRPS month: 2018-05
+2026-09-13 06:26:21,907 | INFO | Reusing cached CHIRPS month: 2018-06
+2026-09-13 06:26:21,909 | INFO | Reusing cached CHIRPS month: 2018-07
+2026-09-13 06:26:21,911 | INFO | Reusing cached CHIRPS month: 2018-08
+2026-09-13 06:26:21,913 | INFO | Reusing cached CHIRPS month: 2018-09
+2026-09-13 06:26:21,915 | INFO | Reusing cached CHIRPS month: 2018-10
+2026-09-13 06:26:21,918 | INFO | Reusing cached CHIRPS month: 2018-11
+2026-09-13 06:26:21,920 | INFO | Reusing cached CHIRPS month: 2018-12
+2026-09-13 06:26:21,923 | INFO | Reusing cached CHIRPS month: 2019-01
+2026-09-13 06:26:21,926 | INFO | Reusing cached CHIRPS month: 2019-02
+2026-09-13 06:26:21,928 | INFO | Reusing cached CHIRPS month: 2019-03
+2026-09-13 06:26:21,930 | INFO | Reusing cached CHIRPS month: 2019-04
+2026-09-13 06:26:21,932 | INFO | Reusing cached CHIRPS month: 2019-05
+2026-09-13 06:26:21,935 | INFO | Reusing cached CHIRPS month: 2019-06
+2026-09-13 06:26:21,937 | INFO | Reusing cached CHIRPS month: 2019-07
+2026-09-13 06:26:21,939 | INFO | Reusing cached CHIRPS month: 2019-08
+2026-09-13 06:26:21,941 | INFO | Reusing cached CHIRPS month: 2019-09
+2026-09-13 06:26:21,943 | INFO | Reusing cached CHIRPS month: 2019-10
+2026-09-13 06:26:21,945 | INFO | Reusing cached CHIRPS month: 2019-11
+2026-09-13 06:26:21,948 | INFO | Reusing cached CHIRPS month: 2019-12
+2026-09-13 06:26:21,950 | INFO | Reusing cached CHIRPS month: 2020-01
+2026-09-13 06:26:21,952 | INFO | Reusing cached CHIRPS month: 2020-02
+2026-09-13 06:26:21,955 | INFO | Reusing cached CHIRPS month: 2020-03
+2026-09-13 06:26:21,957 | INFO | Reusing cached CHIRPS month: 2020-04
+2026-09-13 06:26:21,959 | INFO | Reusing cached CHIRPS month: 2020-05
+2026-09-13 06:26:21,961 | INFO | Reusing cached CHIRPS month: 2020-06
+2026-09-13 06:26:21,964 | INFO | Reusing cached CHIRPS month: 2020-07
+2026-09-13 06:26:21,966 | INFO | Reusing cached CHIRPS month: 2020-08
+2026-09-13 06:26:21,968 | INFO | Reusing cached CHIRPS month: 2020-09
+2026-09-13 06:26:21,971 | INFO | Reusing cached CHIRPS month: 2020-10
+2026-09-13 06:26:21,973 | INFO | Reusing cached CHIRPS month: 2020-11
+2026-09-13 06:26:21,976 | INFO | Reusing cached CHIRPS month: 2020-12
+2026-09-13 06:26:21,978 | INFO | Reusing cached CHIRPS month: 2021-01
+2026-09-13 06:26:21,980 | INFO | Reusing cached CHIRPS month: 2021-02
+2026-09-13 06:26:21,982 | INFO | Reusing cached CHIRPS month: 2021-03
+2026-09-13 06:26:21,984 | INFO | Reusing cached CHIRPS month: 2021-04
+2026-09-13 06:26:21,987 | INFO | Reusing cached CHIRPS month: 2021-05
+2026-09-13 06:26:21,989 | INFO | Reusing cached CHIRPS month: 2021-06
+2026-09-13 06:26:21,991 | INFO | Reusing cached CHIRPS month: 2021-07
+2026-09-13 06:26:21,993 | INFO | Reusing cached CHIRPS month: 2021-08
+2026-09-13 06:26:21,996 | INFO | Reusing cached CHIRPS month: 2021-09
+2026-09-13 06:26:21,998 | INFO | Reusing cached CHIRPS month: 2021-10
+2026-09-13 06:26:22,000 | INFO | Reusing cached CHIRPS month: 2021-11
+2026-09-13 06:26:22,003 | INFO | Reusing cached CHIRPS month: 2021-12
+2026-09-13 06:26:22,005 | INFO | Reusing cached CHIRPS month: 2022-01
+2026-09-13 06:26:22,006 | INFO | Reusing cached CHIRPS month: 2022-02
+2026-09-13 06:26:22,009 | INFO | Reusing cached CHIRPS month: 2022-03
+2026-09-13 06:26:22,011 | INFO | Reusing cached CHIRPS month: 2022-04
+2026-09-13 06:26:22,013 | INFO | Reusing cached CHIRPS month: 2022-05
+2026-09-13 06:26:22,016 | INFO | Reusing cached CHIRPS month: 2022-06
+2026-09-13 06:26:22,018 | INFO | Reusing cached CHIRPS month: 2022-07
+2026-09-13 06:26:22,020 | INFO | Reusing cached CHIRPS month: 2022-08
+2026-09-13 06:26:22,022 | INFO | Reusing cached CHIRPS month: 2022-09
+2026-09-13 06:26:22,024 | INFO | Reusing cached CHIRPS month: 2022-10
+2026-09-13 06:26:22,026 | INFO | Reusing cached CHIRPS month: 2022-11
+2026-09-13 06:26:22,028 | INFO | Reusing cached CHIRPS month: 2022-12
+2026-09-13 06:26:22,031 | INFO | Reusing cached CHIRPS month: 2023-01
+2026-09-13 06:26:22,033 | INFO | Reusing cached CHIRPS month: 2023-02
+2026-09-13 06:26:22,035 | INFO | Reusing cached CHIRPS month: 2023-03
+2026-09-13 06:26:22,037 | INFO | Reusing cached CHIRPS month: 2023-04
+2026-09-13 06:26:22,039 | INFO | Reusing cached CHIRPS month: 2023-05
+2026-09-13 06:26:22,041 | INFO | Downloading CHIRPS daily rainfall 2023-06
+2026-09-13 06:27:04,886 | INFO | Downloading CHIRPS daily rainfall 2023-07
+2026-09-13 06:27:52,334 | INFO | Downloading CHIRPS daily rainfall 2023-08
+2026-09-13 06:28:37,507 | INFO | Downloading CHIRPS daily rainfall 2023-09
+2026-09-13 06:29:20,412 | INFO | Downloading CHIRPS daily rainfall 2023-10
+2026-09-13 06:30:06,450 | INFO | Downloading CHIRPS daily rainfall 2023-11
+2026-09-13 06:30:46,820 | INFO | Downloading CHIRPS daily rainfall 2023-12
+2026-09-13 06:31:28,962 | INFO | Downloading CHIRPS daily rainfall 2024-01
+2026-09-13 06:32:11,386 | INFO | Downloading CHIRPS daily rainfall 2024-02
+2026-09-13 06:32:52,765 | INFO | Downloading CHIRPS daily rainfall 2024-03
+2026-09-13 06:33:37,067 | INFO | Downloading CHIRPS daily rainfall 2024-04
+2026-09-13 06:34:21,218 | INFO | Downloading CHIRPS daily rainfall 2024-05
+2026-09-13 06:35:05,577 | INFO | Downloading CHIRPS daily rainfall 2024-06
+2026-09-13 06:35:47,991 | INFO | Downloading CHIRPS daily rainfall 2024-07
+2026-09-13 06:36:36,335 | INFO | Downloading CHIRPS daily rainfall 2024-08
+2026-09-13 06:37:22,347 | INFO | Downloading CHIRPS daily rainfall 2024-09
+2026-09-13 06:38:03,920 | INFO | Downloading CHIRPS daily rainfall 2024-10
+2026-09-13 06:38:49,354 | INFO | Downloading CHIRPS daily rainfall 2024-11
+2026-09-13 06:39:31,902 | INFO | Downloading CHIRPS daily rainfall 2024-12
+2026-09-13 06:40:17,609 | INFO | Saved 1753200 complete daily rainfall observations
+2026-09-13 06:40:17,613 | INFO | Downloading daily-mean SMAP 2016-12
+2026-09-13 06:40:28,820 | INFO | Downloading daily-mean SMAP 2017-01
+2026-09-13 06:48:04,551 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 06:48:08,852 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 06:48:08,852 | INFO | Reusing cached daily rainfall: E:\Research\Kodagu_DK_Audit_Corrected_Pipeline\earth_engine_pipeline\earth_engine_raw_data\rainfall_daily_2017_2024.parquet
+2026-09-13 06:48:08,941 | INFO | Reusing cached SMAP month: 2016-12
+2026-09-13 06:48:08,944 | INFO | Downloading daily-mean SMAP 2017-01
+2026-09-13 06:49:01,665 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 06:49:06,621 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 06:49:06,621 | INFO | Reusing cached daily rainfall: E:\Research\Kodagu_DK_Audit_Corrected_Pipeline\earth_engine_pipeline\earth_engine_raw_data\rainfall_daily_2017_2024.parquet
+2026-09-13 06:49:06,712 | INFO | Reusing cached SMAP month: 2016-12
+2026-09-13 06:49:06,715 | INFO | Downloading daily-mean SMAP 2017-01
+2026-09-13 07:01:18,879 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 07:01:23,995 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 07:01:23,995 | INFO | Reusing cached daily rainfall: E:\Research\Kodagu_DK_Audit_Corrected_Pipeline\earth_engine_pipeline\earth_engine_raw_data\rainfall_daily_2017_2024.parquet
+2026-09-13 07:01:24,088 | INFO | Reusing cached SMAP month: 2016-12
+2026-09-13 07:01:24,090 | INFO | Downloading daily-mean SMAP 2017-01
+2026-09-13 07:02:21,911 | INFO | Earth Engine transient error on attempt 1/8 (Too many concurrent aggregations.); retrying in 5.0s
+2026-09-13 07:03:09,921 | INFO | Earth Engine transient error on attempt 2/8 (Too many concurrent aggregations.); retrying in 10.0s
+2026-09-13 07:04:17,752 | INFO | Earth Engine transient error on attempt 3/8 (Too many concurrent aggregations.); retrying in 20.0s
+2026-09-13 07:05:48,962 | INFO | Earth Engine transient error on attempt 4/8 (Too many concurrent aggregations.); retrying in 40.0s
+2026-09-13 07:07:15,010 | INFO | Earth Engine transient error on attempt 5/8 (Too many concurrent aggregations.); retrying in 80.0s
+2026-09-13 07:09:18,675 | INFO | Earth Engine transient error on attempt 6/8 (Too many concurrent aggregations.); retrying in 120.0s
+2026-09-13 07:18:18,822 | INFO | Earth Engine transient error on attempt 7/8 (Too many concurrent aggregations.); retrying in 120.0s
+2026-09-13 07:36:16,727 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 07:36:22,533 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 07:36:22,533 | INFO | Reusing cached daily rainfall: E:\Research\Kodagu_DK_Audit_Corrected_Pipeline\earth_engine_pipeline\earth_engine_raw_data\rainfall_daily_2017_2024.parquet
+2026-09-13 07:36:22,703 | INFO | Reusing cached SMAP month: 2016-12
+2026-09-13 07:36:22,706 | INFO | Downloading daily-mean SMAP 2017-01
+2026-09-13 07:38:29,518 | INFO | Downloading daily-mean SMAP 2017-02
+2026-09-13 07:40:13,501 | INFO | Downloading daily-mean SMAP 2017-03
+2026-09-13 07:42:21,798 | INFO | Downloading daily-mean SMAP 2017-04
+2026-09-13 07:44:30,272 | INFO | Downloading daily-mean SMAP 2017-05
+2026-09-13 07:46:33,038 | INFO | Downloading daily-mean SMAP 2017-06
+2026-09-13 07:48:11,469 | INFO | Downloading daily-mean SMAP 2017-07
+2026-09-13 07:49:59,165 | INFO | Downloading daily-mean SMAP 2017-08
+2026-09-13 07:52:27,698 | INFO | Downloading daily-mean SMAP 2017-09
+2026-09-13 07:56:33,738 | INFO | Downloading daily-mean SMAP 2017-10
+2026-09-13 08:07:43,145 | INFO | Earth Engine initialized with project my-research-project-506405
+2026-09-13 08:07:48,878 | INFO | Saved boundary and verified 600 uploaded sites
+2026-09-13 08:07:48,896 | INFO | Reusing cached daily rainfall: E:\Research\Kodagu_DK_Audit_Corrected_Pipeline\earth_engine_pipeline\earth_engine_raw_data\rainfall_daily_2017_2024.parquet
+2026-09-13 08:07:49,208 | INFO | Reusing cached SMAP month: 2016-12
+2026-09-13 08:07:49,213 | INFO | Reusing cached SMAP month: 2017-01
+2026-09-13 08:07:49,218 | INFO | Reusing cached SMAP month: 2017-02
+2026-09-13 08:07:49,223 | INFO | Reusing cached SMAP month: 2017-03
+2026-09-13 08:07:49,229 | INFO | Reusing cached SMAP month: 2017-04
+2026-09-13 08:07:49,233 | INFO | Reusing cached SMAP month: 2017-05
+2026-09-13 08:07:49,238 | INFO | Reusing cached SMAP month: 2017-06
+2026-09-13 08:07:49,244 | INFO | Reusing cached SMAP month: 2017-07
+2026-09-13 08:07:49,249 | INFO | Reusing cached SMAP month: 2017-08
+2026-09-13 08:07:49,254 | INFO | Reusing cached SMAP month: 2017-09
+2026-09-13 08:07:49,259 | INFO | Downloading daily-mean SMAP 2017-10
+2026-09-13 08:10:06,677 | INFO | Downloading daily-mean SMAP 2017-11

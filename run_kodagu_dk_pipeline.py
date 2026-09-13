@@ -675,16 +675,60 @@ def init_earth_engine(project_id: str, logger: logging.Logger):
     return ee
 
 
-def ee_fc_to_dataframe(ee, fc, selectors: Sequence[str]) -> pd.DataFrame:
-    """Download a FeatureCollection directly as a paginated pandas DataFrame."""
+_EE_TRANSIENT_ERROR_MARKERS = (
+    "too many concurrent",
+    "rate limit",
+    "quota",
+    "internal error",
+    "backend error",
+    "computation timed out",
+    "deadline exceeded",
+    "user memory limit exceeded",
+)
+
+
+def ee_fc_to_dataframe(
+    ee,
+    fc,
+    selectors: Sequence[str],
+    max_attempts: int = 8,
+    initial_delay_s: float = 5.0,
+) -> pd.DataFrame:
+    """Download a FeatureCollection directly as a paginated pandas DataFrame.
+
+    Earth Engine returns 429/500-class errors ("Too many concurrent
+    aggregations", quota limits, etc.) under ordinary load; these are
+    retried with exponential backoff rather than crashing the whole
+    month-by-month fetch. Any other error is raised immediately.
+    """
     selected = fc.select(list(selectors))
-    result = ee.data.computeFeatures(
-        {
-            "expression": selected,
-            "fileFormat": "PANDAS_DATAFRAME",
-            "pageSize": 5000,
-        }
-    )
+    logger = logging.getLogger("kodagu_pipeline")
+    delay = initial_delay_s
+    for attempt in range(1, max_attempts + 1):
+        try:
+            result = ee.data.computeFeatures(
+                {
+                    "expression": selected,
+                    "fileFormat": "PANDAS_DATAFRAME",
+                    "pageSize": 5000,
+                }
+            )
+            break
+        except Exception as exc:
+            is_transient = any(
+                marker in str(exc).lower() for marker in _EE_TRANSIENT_ERROR_MARKERS
+            )
+            if not is_transient or attempt == max_attempts:
+                raise
+            logger.info(
+                "Earth Engine transient error on attempt %d/%d (%s); retrying in %.1fs",
+                attempt,
+                max_attempts,
+                exc,
+                delay,
+            )
+            time.sleep(delay)
+            delay = min(delay * 2, 120.0)
     if isinstance(result, pd.DataFrame):
         df = result.reset_index(drop=True)
     elif isinstance(result, dict) and "features" in result:
@@ -760,8 +804,21 @@ def reduce_collection_by_day(
     scale_m: int,
     date_start: date,
     date_end_exclusive: date,
-):
-    """Reduce one image per day to all sites and return one flat collection."""
+    request_pacing_s: float = 0.2,
+) -> pd.DataFrame:
+    """Reduce one image per day to all sites, one Earth Engine request PER
+    DAY, and return the concatenated pandas DataFrame.
+
+    Bundling many days into a single ee.List.map(...).flatten() and one
+    computeFeatures call (the previous approach) fans out that many
+    reduceRegions sub-computations inside one server-side request. Earth
+    Engine's per-project concurrent-aggregation quota can reject that
+    request outright, and it keeps failing the same way no matter how long
+    a retry backs off, because the request itself is too large for the
+    quota, not because of a passing traffic spike. Requesting one day at a
+    time keeps each request far below that ceiling; a small pacing delay
+    between requests further avoids tripping it from rapid-fire calls.
+    """
     start = ee.Date(str(date_start))
     end = ee.Date(str(date_end_exclusive))
     ic = image_collection.filterDate(start, end)
@@ -769,8 +826,10 @@ def reduce_collection_by_day(
     if count == 0:
         raise RuntimeError(f"No images between {date_start} and {date_end_exclusive}")
     images = ic.toList(count)
+    selectors = ["sample_id", "date", *output_names]
 
-    def reduce_one(i):
+    day_frames: list[pd.DataFrame] = []
+    for i in range(count):
         image = ee.Image(images.get(i)).select(list(value_bands)).rename(list(output_names))
         date_text = image.date().format("YYYY-MM-dd")
         reduced = image.reduceRegions(
@@ -786,10 +845,11 @@ def reduce_collection_by_day(
             reduced = reduced.map(
                 lambda f: f.set(output_names[0], f.get("first"))
             )
-        return reduced.map(lambda f: f.set("date", date_text))
-
-    nested = ee.List.sequence(0, count - 1).map(reduce_one)
-    return ee.FeatureCollection(nested).flatten()
+        reduced = reduced.map(lambda f: f.set("date", date_text))
+        day_frames.append(ee_fc_to_dataframe(ee, reduced, selectors))
+        if request_pacing_s and i < count - 1:
+            time.sleep(request_pacing_s)
+    return pd.concat(day_frames, ignore_index=True)
 
 
 def extract_daily_rainfall(
@@ -816,7 +876,7 @@ def extract_daily_rainfall(
             frames.append(pd.read_parquet(month_cache_file))
             continue
         logger.info("Downloading CHIRPS daily rainfall %s", month_start.strftime("%Y-%m"))
-        fc = reduce_collection_by_day(
+        frame = reduce_collection_by_day(
             ee,
             chirps,
             sites,
@@ -826,7 +886,6 @@ def extract_daily_rainfall(
             month_start,
             month_end,
         )
-        frame = ee_fc_to_dataframe(ee, fc, ["sample_id", "date", "rain_mm_day"])
         save_parquet(frame, month_cache_file)
         frames.append(frame)
 
@@ -901,7 +960,7 @@ def extract_daily_smap(
         daily = make_smap_daily_collection(
             ee, smap, month_start, month_end, cfg.smap_bands
         )
-        fc = reduce_collection_by_day(
+        frame = reduce_collection_by_day(
             ee,
             daily,
             sites,
@@ -911,7 +970,6 @@ def extract_daily_smap(
             month_start,
             month_end,
         )
-        frame = ee_fc_to_dataframe(ee, fc, ["sample_id", "date", *cfg.smap_bands])
         save_parquet(frame, month_cache_file)
         frames.append(frame)
 
